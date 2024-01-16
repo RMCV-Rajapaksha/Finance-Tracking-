@@ -1,0 +1,261 @@
+.dashboard-title {
+    position: absolute;
+    left:450px;
+    top : 35px;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+
+
+font-size: 48px;
+font-style: normal;
+font-weight: 800px;
+line-height: 110%; /* 52.8px */
+-webkit-text-stroke: 1px #182145;
+}
+
+.total-income {
+    position: absolute;
+    left:450px;
+    top : 114px;
+    border-radius: 25px;
+background: #71BAB5;
+width: 290px;
+height: 175px;
+flex-shrink: 0;
+}
+.total-income-title {
+    position: absolute;
+    top : 55px;
+    left:70px;
+    width: 149px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+
+font-size: 26px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%; /* 26.4px */
+}
+.total-expenses {
+    position: absolute;
+    left: 755px;
+    top : 114px;
+    width: 903px;
+height: 175px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #D9D9D9;
+
+}
+
+.total-expenses-title
+{position: absolute;
+    top : 55px;
+    left:24px;
+    width: 160px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+    font-size: 26px;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+
+}
+.food-2
+{
+    
+    position: absolute;
+    top : 14px;
+    left:220px;
+    width: 210px;
+    height: 145px;
+  
+    border-radius: 25px;
+    background: #1B9D94;
+    
+}
+.traveling
+{position: absolute;
+    top : 14px;
+    left:445px;
+    width: 210px;
+    height: 145px;
+  
+    border-radius: 25px;
+    background: #71BAB5;
+    
+}
+
+.other-1
+{
+    position: absolute;
+    top : 14px;
+    left:670px;
+    width: 210px;
+    height: 145px;
+   
+    border-radius: 25px;
+    background: #A7C4C2;
+}
+
+.saving-1
+{
+    position: absolute;
+    top : 324px;
+    left:450px;
+    width: 1210px;
+height: 96px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #D9D9D9;
+}
+
+.chart-1
+{position: absolute;
+    top : 452px;
+    left:450px;
+    width: 586px;
+height: 611px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #D9D9D9;
+}
+.bank-d-1
+{
+    position: absolute;
+    top : 452px;
+    left:1070px;
+    width: 586px;
+height: 611px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #D9D9D9;
+}
+
+.food-2-title
+{
+    position: absolute;
+    top : 20px;
+    left:60px;
+    width: 160px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+    font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+
+}
+.traveling-title
+{
+    position: absolute;
+    top : 20px;
+    left:55px;
+    width: 160px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+    font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+}
+
+.other-title
+{
+    position: absolute;
+    top : 20px;
+    left:70px;
+    width: 160px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+    font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+}
+
+.food-2-value{
+    position: absolute;
+    top : 50px;
+    left:55px;
+    width: 160px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+    font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+}
+
+.total-expense-value
+{
+    position: absolute;
+    top :90px;
+    left:55px;
+    width: 160px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+    font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+}
+.total-income-value{
+
+    position: absolute;
+    top :90px;
+    left:85px;
+    width: 160px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+    font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+}
+
+.account-table
+{
+    
+    position: absolute;
+    top:10px;
+    left: 70px;
+    width: 1150px;
+   
+}
+
+.bank-account
+{
+    border-radius: 25px;
+    border-color: #1B9D94;
+}
+
+.chart
+{
+
+}

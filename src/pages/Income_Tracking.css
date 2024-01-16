@@ -1,0 +1,218 @@
+.Income
+{
+    position: absolute;
+    left:450px;
+    top : -20px;
+    color: #182145;
+    font:Roboto;
+
+
+font-size: 48px;
+font-style: normal;
+font-weight: 800px;
+line-height: 110%; /* 52.8px */
+-webkit-text-stroke: 1px #182145;
+
+}
+
+
+.main-i
+{
+    position: absolute;
+    left:102px;
+    top : 30px;
+    border-radius: 25px;
+    width: 346px;
+    height: 208px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    border: 4px solid #A7C4C2;
+   
+
+}
+
+.other
+{
+    position: absolute;
+    left:750px ;
+    top : 30px;
+    border-radius: 25px;
+    width: 346px;
+    height: 208px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    border: 4px solid #A7C4C2;
+
+
+}
+
+
+
+.I1
+{position: absolute;
+    left:95px;
+    top : 11px;
+    width: 200px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #182145;
+font: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 26.4px */
+-webkit-text-stroke: 1px #182145;
+}
+
+.I2
+{position: absolute;
+    left:80px;
+    top : 11px;
+    width: 200px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #182145;
+font: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 26.4px */
+-webkit-text-stroke: 1px #182145;
+}
+
+
+.in
+{
+    position: absolute;
+    left:20.5px;
+    top : 48px;
+    width: 305px;
+    height: 29px;
+    flex-shrink: 0;
+    background: rgb(254, 254, 254);
+    z-index: 3;
+    border-radius: 25px;
+
+}
+
+.price
+{
+    position: absolute;
+    left:20.5px;
+    top : 96.5px;
+    width: 305px;
+    height: 29px;
+    flex-shrink: 0;
+    background: rgb(254, 254, 254);
+    z-index: 3;
+    border-radius: 25px;
+
+}
+
+.priceA
+{
+    position: absolute;
+    left:20.5px;
+    top : 50px;
+    width: 305px;
+    height: 29px;
+    flex-shrink: 0;
+    background: rgb(254, 254, 254);
+    z-index: 3;
+    border-radius: 25px;
+
+}
+.other_topic
+{
+    position: absolute;
+    left:500px;
+    top : 20px;
+    color: #182145;
+    font: Roboto;
+
+    -webkit-text-stroke: 1px #182145;
+font-size: 28px;
+
+font-weight: 400;
+line-height: 110%; /* 52.8px */
+
+
+}
+
+
+.other_income_table
+{
+    position: absolute;
+    left:450px;
+    top : 569px;
+    width: 1200px;
+height: 509px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #D9D9D9;
+}
+
+.Main_income_div
+{
+    position: absolute;
+    left:450px;
+    top : 410px;
+    width: 1200px;
+    width: 1194px;
+    height: 119px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #D9D9D9;
+    z-index: 100;
+
+}
+
+.main_income_topic
+{
+    position: absolute;
+    left:508px;
+    top : 5px;
+    color: #182145;
+   
+    -webkit-text-stroke: 1px #182145;
+
+font-size: 28px;
+
+font-weight: 400;
+line-height: 110%; /* 52.8px */
+
+}
+
+.other-income-table
+{
+    
+    position: absolute;
+    left:50px;
+    top : 69px;
+
+ 
+}
+table {
+    border-collapse: collapse;
+    width:92%;
+}
+  th {
+    padding: 8px;
+    font-weight: 700;
+    text-align: left;
+    border-bottom: 1px solid #182145;
+    -webkit-text-stroke: 1px #182145;
+  }
+  td{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #182145;
+    -webkit-text-stroke: 1px #182145;
+
+  }
+  
+  tr:hover {background-color: #A7C4C2;}
+
+
+
+  
