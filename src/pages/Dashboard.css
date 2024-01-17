@@ -122,7 +122,7 @@ background: #D9D9D9;
     top : 452px;
     left:450px;
     width: 586px;
-height: 611px;
+height: 400px;
 flex-shrink: 0;
 border-radius: 25px;
 background: #D9D9D9;
@@ -255,7 +255,71 @@ line-height: 110%;
     border-color: #1B9D94;
 }
 
-.chart
-{
 
+.chart-1-title
+{
+    position: absolute;
+    top : 20px;
+    left:220px;
+    width: 260px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+    font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+}
+
+.chart-1-in{
+    position: absolute;
+    top : 50px;
+    left:7px;
+    width: 570px;
+    height: 300px;
+    background: #D9D9D9;
+
+
+}
+
+.Expenses-chart
+{
+    position: absolute;
+    top : 452px;
+    left:1075px;
+    width: 586px;
+height: 400px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #D9D9D9;
+}
+
+.expenses-chart-title
+{
+    position: absolute;
+    top : 2vh;
+    left:19vh;
+    width: 30vh;
+height: 20vh;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+    font-size: 2vh;
+font-style: normal;
+font-weight: 400;
+line-height: 110%;
+
+}
+
+.expenses-chart-in
+{
+    position: absolute;
+    top : 5vh;
+    left:14vh;
+    width: 570px;
+    height: 300px;
+    
 }
