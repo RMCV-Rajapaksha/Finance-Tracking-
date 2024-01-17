@@ -9,6 +9,12 @@ const Saving_Goal = () => {
     insurancePremiums: 0,
   });
 
+  const [additionalInputValues, setAdditionalInputValues] = useState({
+    food: 0,
+    traveling: 0,
+    clothesAndOther: 0,
+  });
+
   const data = {
     labels: ['Rent', 'Utilities', 'Insurance Premiums'],
     datasets: [
@@ -24,25 +30,47 @@ const Saving_Goal = () => {
     ],
   };
 
-  const handleChange = (e, expenseType) => {
-    const value = parseFloat(e.target.value) || 0;
-    setInputValues((prevValues) => ({
-      ...prevValues,
-      [expenseType]: value,
-    }));
+  const additionalData = {
+    labels: ['Food', 'Traveling', 'Clothes and Other'],
+    datasets: [
+      {
+        data: [
+          additionalInputValues.food,
+          additionalInputValues.traveling,
+          additionalInputValues.clothesAndOther,
+        ],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+      },
+    ],
   };
 
-  useEffect(() => {
-   
-  }, [inputValues]);
+  const handleChange = (e, expenseType) => {
+    const value = parseFloat(e.target.value) || 0;
+
+    if (['food', 'traveling', 'clothesAndOther'].includes(expenseType)) {
+      setAdditionalInputValues((prevValues) => ({
+        ...prevValues,
+        [expenseType]: value,
+      }));
+    } else {
+      setInputValues((prevValues) => ({
+        ...prevValues,
+        [expenseType]: value,
+      }));
+    }
+  };
 
   return (
     <React.Fragment>
-      <section>
-        <div className='saving'>Saving Goal</div>
+      
+      <div className='saving'>Saving Goal</div>
         <div className='saving-theme'>Start Your Budgeting Journey</div>
         <div className='fixed-expenses'>
           <div className='rent'>
+            <dev className="rent-topic">
+              Rent
+            </dev>
             <input
               className='rent-input'
               type='number'
@@ -52,6 +80,9 @@ const Saving_Goal = () => {
             />
           </div>
           <div className='utilities'>
+          <dev className="utilities-topic">
+          Utilities
+            </dev>
             <input
               className='utilities-input'
               type='number'
@@ -61,6 +92,9 @@ const Saving_Goal = () => {
             />
           </div>
           <div className='insurance-premiums'>
+          <dev className="insurance-topic">
+          Insurance
+            </dev>
             <input
               className='insurance-premiums-input'
               type='number'
@@ -70,32 +104,47 @@ const Saving_Goal = () => {
             />
           </div>
         </div>
-        <div className='variable-expenses'>
-
-        <div className='rent' >
-        <input className='food-input' type="number" placeholder="Rents" />
+      <div className='variable-expenses'>
+        <div className='rent'>
+          <input
+            className='food-input'
+            type='number'
+            placeholder='Food'
+            value={additionalInputValues.food}
+            onChange={(e) => handleChange(e, 'food')}
+          />
         </div>
-<div className='utilities' >
-<input className='traveling-input' type="number" placeholder="Rents" />
-</div>
-<div className='insurance-premiums' >
-<input className='clothes-other-input' type="number" placeholder="Rents" />
-</div>
+        <div className='utilities'>
+          <input
+            className='traveling-input'
+            type='number'
+            placeholder='Traveling'
+            value={additionalInputValues.traveling}
+            onChange={(e) => handleChange(e, 'traveling')}
+          />
         </div>
+        <div className='insurance-premiums'>
+          <input
+            className='clothes-other-input'
+            type='number'
+            placeholder='Clothes and Other'
+            value={additionalInputValues.clothesAndOther}
+            onChange={(e) => handleChange(e, 'clothesAndOther')}
+          />
+        </div>
+      </div>
 
-        <div className='chart-container'>
-          <div className='chart-container-in'>
+      <div className='chart-container'>
+        <div className='chart-container-in'>
           <Pie data={data} />
-          </div>
-         
         </div>
-        <div className='chart-container-2'> 
+      </div>
+
+      <div className='chart-container-2'>
         <div className='chart-container-2-in'>
-          <Pie data={data} />
-          </div>
+          <Pie data={additionalData} />
         </div>
-
-      </section>
+      </div>
     </React.Fragment>
   );
 };
