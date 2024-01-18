@@ -3,148 +3,55 @@ import './Saving_Goal.css';
 import { Pie } from 'react-chartjs-2';
 
 const Saving_Goal = () => {
-  const [inputValues, setInputValues] = useState({
-    rent: 0,
-    utilities: 0,
-    insurancePremiums: 0,
-  });
-
-  const [additionalInputValues, setAdditionalInputValues] = useState({
-    food: 0,
-    traveling: 0,
-    clothesAndOther: 0,
-  });
-
-  const data = {
-    labels: ['Rent', 'Utilities', 'Insurance Premiums'],
-    datasets: [
-      {
-        data: [
-          inputValues.rent,
-          inputValues.utilities,
-          inputValues.insurancePremiums,
-        ],
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-      },
-    ],
-  };
-
-  const additionalData = {
-    labels: ['Food', 'Traveling', 'Clothes and Other'],
-    datasets: [
-      {
-        data: [
-          additionalInputValues.food,
-          additionalInputValues.traveling,
-          additionalInputValues.clothesAndOther,
-        ],
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-      },
-    ],
-  };
-
-  const handleChange = (e, expenseType) => {
-    const value = parseFloat(e.target.value) || 0;
-
-    if (['food', 'traveling', 'clothesAndOther'].includes(expenseType)) {
-      setAdditionalInputValues((prevValues) => ({
-        ...prevValues,
-        [expenseType]: value,
-      }));
-    } else {
-      setInputValues((prevValues) => ({
-        ...prevValues,
-        [expenseType]: value,
-      }));
-    }
-  };
+ 
 
   return (
     <React.Fragment>
       
       <div className='saving'>Saving Goal</div>
-        <div className='saving-theme'>Start Your Budgeting Journey</div>
-        <div className='fixed-expenses'>
-          <div className='rent'>
-            <dev className="rent-topic">
-              Rent
-            </dev>
-            <input
-              className='rent-input'
-              type='number'
-              placeholder='Rent'
-              value={inputValues.rent}
-              onChange={(e) => handleChange(e, 'rent')}
-            />
+        <div className='saving-theme'>It's never too late to start saving</div>
+        <div className='target-1'>
+          <div className='target-1-topic'> 
+          Enter Your Target 
           </div>
-          <div className='utilities'>
-          <dev className="utilities-topic">
-          Utilities
-            </dev>
-            <input
-              className='utilities-input'
-              type='number'
-              placeholder='Utilities'
-              value={inputValues.utilities}
-              onChange={(e) => handleChange(e, 'utilities')}
-            />
+          <input
+            className='target-input'
+            type='number'
+            placeholder='Target'
+          />
+      </div>
+      <div className='target-2'>
+          <div className='target-1-topic'> 
+          Date and Money Deposit Date 
           </div>
-          <div className='insurance-premiums'>
-          <dev className="insurance-topic">
-          Insurance
-            </dev>
-            <input
-              className='insurance-premiums-input'
-              type='number'
-              placeholder='Insurance Premiums'
-              value={inputValues.insurancePremiums}
-              onChange={(e) => handleChange(e, 'insurancePremiums')}
-            />
-          </div>
-        </div>
-      <div className='variable-expenses'>
-        <div className='rent'>
           <input
-            className='food-input'
-            type='number'
-            placeholder='Food'
-            value={additionalInputValues.food}
-            onChange={(e) => handleChange(e, 'food')}
+            className='date-input'
+            type='date'
+            placeholder='Date'
           />
-        </div>
-        <div className='utilities'>
           <input
-            className='traveling-input'
+            className='deposit-input'
             type='number'
-            placeholder='Traveling'
-            value={additionalInputValues.traveling}
-            onChange={(e) => handleChange(e, 'traveling')}
+            placeholder='Rs.'
           />
-        </div>
-        <div className='insurance-premiums'>
-          <input
-            className='clothes-other-input'
-            type='number'
-            placeholder='Clothes and Other'
-            value={additionalInputValues.clothesAndOther}
-            onChange={(e) => handleChange(e, 'clothesAndOther')}
-          />
-        </div>
       </div>
 
-      <div className='chart-container'>
-        <div className='chart-container-in'>
-          <Pie data={data} />
-        </div>
-      </div>
+<div className="table-report">
 
-      <div className='chart-container-2'>
-        <div className='chart-container-2-in'>
-          <Pie data={additionalData} />
-        </div>
-      </div>
+</div>
+<div className='total-deposit'>
+<div className='total-deposit-n'> 
+Total Deposited Amount
+          </div>
+</div>
+
+<div className='want-deposit'>
+<div className='want-to-deposit-name'> 
+How Much Do You Want to Deposit
+          </div>
+</div>
+
+<div className='enter-deposit'></div>
     </React.Fragment>
   );
 };

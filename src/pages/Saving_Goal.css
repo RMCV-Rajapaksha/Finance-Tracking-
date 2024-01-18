@@ -1,263 +1,156 @@
-.saving
+
+.target-1
+{   position: absolute;
+    top:164px ;
+    left: 450px;
+    width: 1214px;
+    height: 74px;
+    flex-shrink: 0;
+border-radius: 25px;
+background: #D9D9D9;
+}
+.target-input
 {
     position: absolute;
-    left:450px;
-    top : 35px;
-    color: #182145;
-    font-family: Roboto, var(--default-font-family);
-font-size: 48px;
-font-style: normal;
-font-weight: 800px;
-line-height: 110%; /* 52.8px */
--webkit-text-stroke: 1px #182145;
-
+    top:17px ;
+    left: 575px;
+    width: 591px;
+height: 35px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #FFF;
 }
 
-.saving-theme
-{position: absolute;
-    left:450px;
-    top : 110px;
-    width: 495px;
-height: 38px;
+.target-1-topic
+{
+    position: absolute;
+    top:20px ;
+    left: 35px;
+    width: 610px;
+height: 30px;
 flex-shrink: 0;
-color: #182145;
+    color: #000;
+-webkit-text-stroke-width: 1;
+-webkit-text-stroke-color: #182145;
 font: Roboto;
-font-size: 32px;
+font-size: 26px;
 font-style: normal;
 font-weight: 400;
-line-height: 110%; /* 35.2px */
+line-height: 110%; /* 28.6px */
+
 -webkit-text-stroke: 1px #182145;
 }
 
-.fixed-expenses
-{position: absolute;
-    left:450px;
-    top : 184px;
-    border-radius: 25px;
+.target-2
+{   position: absolute;
+    top:262px ;
+    left: 450px;
+    width: 1214px;
+    height: 74px;
+    flex-shrink: 0;
+border-radius: 25px;
 background: #D9D9D9;
-width: 1214px;
-height: 186px;
-flex-shrink: 0;
 }
-.variable-expenses
+.date-input
 {
     position: absolute;
-    left:450px;
-    top : 397px;
+    top:17px ;
+    left: 575px;
+    width: 287px;
+height: 35px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #FFF;
+}
+.deposit-input
+{
+    position: absolute;
+    top:17px ;
+    left: 875px;
+    width: 287px;
+height: 35px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #FFF;
+}
+.table-report
+{position: absolute;
+    top:360px ;
+    left: 450px;
+    width: 587px;
     border-radius: 25px;
+height: 426px;
+flex-shrink: 0;
+background: #2ba39b;
+}
+.total-deposit
+{position: absolute;
+    top:360px ;
+    left: 1055px;
+    width: 606px;
+height: 74px;
+flex-shrink: 0;
+border-radius: 25px;
 background: #D9D9D9;
-width: 1214px;
-height: 186px;
+}
+.want-deposit
+{
+    position: absolute;
+    top:458px ;
+    left: 1055px;
+    width: 606px;
+height: 74px;
 flex-shrink: 0;
-
+border-radius: 25px;
+background: #D9D9D9;
 }
 
-
-.rent
+.enter-deposit
 {position: absolute;
-    left:320px;
-    top : 23.5px;
-    width: 267px;
-height: 139px;
+    top:552px ;
+    left: 1055px;
+    width: 606px;
+height: 234px;
 flex-shrink: 0;
-    border-radius: 25px;
-background: #1B9D94;
-}
-
-
-.utilities
-{position: absolute;
-    left:624px;
-    top : 23.5px;
-    width: 267px;
-height: 139px;
-flex-shrink: 0;
-    border-radius: 25px;
-background: #71BAB5;
-}
-
-
-.insurance-premiums
-{position: absolute;
-    left:928px;
-    top : 23.5px;
-    width: 267px;
-height: 139px;
-flex-shrink: 0;
-    border-radius: 25px;
+border-radius: 25px;
 background: #A7C4C2;
 }
-
-.rent-input
+.total-deposit-n
 {
     position: absolute;
-    left:31px;
-    top : 71px;
-    width: 205px;
-height: 40px;
+    top:20px ;
+    left: 35px;
+    width: 610px;
+height: 30px;
 flex-shrink: 0;
-border-radius: 25px;
-background: #D9D9D9;
-}
-
-.insurance-premiums-input
-{
-
-    position: absolute;
-    left:31px;
-    top : 71px;
-    width: 205px;
-height: 40px;
-flex-shrink: 0;
-border-radius: 25px;
-background: #D9D9D9;
-}
-
-.utilities-input
-{
-
-    position: absolute;
-    left:31px;
-    top : 71px;
-    width: 205px;
-height: 40px;
-flex-shrink: 0;
-border-radius: 25px;
-background: #D9D9D9;
-}
-
-.food-input
-{
-    position: absolute;
-    left:31px;
-    top : 71px;
-    width: 205px;
-height: 40px;
-flex-shrink: 0;
-border-radius: 25px;
-background: #D9D9D9;
-}
-
-.traveling-input
-{
-    position: absolute;
-    left:31px;
-    top : 71px;
-    width: 205px;
-height: 40px;
-flex-shrink: 0;
-border-radius: 25px;
-background: #D9D9D9;
-}
-
-.clothes-other-input 
-{position: absolute;
-    left:31px;
-    top : 71px;
-    width: 205px;
-height: 40px;
-flex-shrink: 0;
-border-radius: 25px;
-background: #D9D9D9;
-
-}
-.chart-container
-{position: absolute;
-    left:452px;
-    top : 613px;
-    width: 581px;
-height: 438px;
-flex-shrink: 0;
-border-radius: 25px;
-background: #D9D9D9;
-}
-
-.chart-container-in
-{
-    position: absolute;
-    left:120px;
-    top : 60px;
-    width: 350px;
-height: 355px;
-flex-shrink: 0;
-background: #D9D9D9;
-}
-
-.chart-container-2
-{
-    position: absolute;
-    left:1077px;
-    top : 613px;
-    width: 581px;
-height: 438px;
-flex-shrink: 0;
-border-radius: 25px;
-background: #D9D9D9;
-
-
-}
-
-.chart-container-2-in
-{
-    position: absolute;
-    left:120px;
-    top : 60px;
-    width: 350px;
-height: 355px;
-flex-shrink: 0;
-background: #D9D9D9;
-}
-
-.rent-topic
-{
-    position: absolute;
-    top : 30px;
-    left:110px;
-    width: 149px;
-height: 36px;
-flex-shrink: 0;
-    color: #182145;
-    font: Roboto, var(--default-font-family);
-    -webkit-text-stroke: 1px #182145;
-
-font-size: 26px;
+    color: #000;
+-webkit-text-stroke-width: 1;
+-webkit-text-stroke-color: #182145;
+font: Roboto;
+font-size: 24px;
 font-style: normal;
 font-weight: 400;
-line-height: 110%; /* 26.4px */
+line-height: 110%; /* 28.6px */
 
+-webkit-text-stroke: 1px #182145;
 }
-.utilities-topic
+.want-to-deposit-name
 {
     position: absolute;
-    top : 30px;
-    left:95px;
-    width: 149px;
-height: 36px;
+    top:20px ;
+    left: 35px;
+    width: 610px;
+height: 30px;
 flex-shrink: 0;
-    color: #182145;
-    font: Roboto, var(--default-font-family);
-    -webkit-text-stroke: 1px #182145;
-
-font-size: 26px;
+    color: #000;
+-webkit-text-stroke-width: 1;
+-webkit-text-stroke-color: #182145;
+font: Roboto;
+font-size: 24px;
 font-style: normal;
 font-weight: 400;
-line-height: 110%; /* 26.4px */
+line-height: 110%; /* 28.6px */
+
+-webkit-text-stroke: 1px #182145;
 }
 
-.insurance-topic
-{
-    position: absolute;
-    top : 30px;
-    left:80px;
-    width: 149px;
-height: 36px;
-flex-shrink: 0;
-    color: #182145;
-    font: Roboto, var(--default-font-family);
-    -webkit-text-stroke: 1px #182145;
-
-font-size: 26px;
-font-style: normal;
-font-weight: 400;
-line-height: 110%; /* 26.4px */
-}

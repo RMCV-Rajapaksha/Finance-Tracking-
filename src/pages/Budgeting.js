@@ -162,7 +162,7 @@ const Budgeting = () => {
           />
         </div>
         <div className='insurance-premiums'>
-        <div className='insurance-title'>INSURANCE</div>
+        <div className='clothes-other-title'>CLOTHES AND OTHER</div>
           <input
             className='clothes-other-input'
             type='number'
