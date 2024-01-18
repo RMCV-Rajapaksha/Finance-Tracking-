@@ -79,7 +79,7 @@ background: #FFF;
     left: 450px;
     width: 587px;
     border-radius: 25px;
-height: 426px;
+height: 800px;
 flex-shrink: 0;
 background: #2ba39b;
 }
@@ -113,7 +113,7 @@ background: #D9D9D9;
 height: 234px;
 flex-shrink: 0;
 border-radius: 25px;
-background: #A7C4C2;
+
 }
 .total-deposit-n
 {
@@ -146,11 +146,85 @@ flex-shrink: 0;
 -webkit-text-stroke-width: 1;
 -webkit-text-stroke-color: #182145;
 font: Roboto;
+
 font-size: 24px;
 font-style: normal;
 font-weight: 400;
 line-height: 110%; /* 28.6px */
 
+
+}
+
+.deposit-button
+{
+    position: absolute;
+    top:20px ;
+    left: 450px;
+    width: 100px;
+height: 35px;
+flex-shrink: 0;
+border-radius: 25px;
+background: #2ba39b;
+font: Roboto;
+font-size: 20px;
 -webkit-text-stroke: 1px #182145;
 }
 
+.report-saving-goal
+{
+    position: absolute;
+    top:10px ;
+    left: -5px;
+    width: 550px;
+    border-radius: 25px;
+height: 400px;
+flex-shrink: 0;
+background: transparent;
+
+}
+/* Saving_Goal.css */
+
+/* ... existing styles ... */
+
+.saving-theme {
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .saving-theme::before {
+    content: "It's never too late to start saving";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingAnimation 5s steps(60, end) 5s infinite;
+  }
+  
+  @keyframes typingAnimation {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .saving-theme
+  {
+    position: absolute;
+    left:450px;
+    top : 110px;
+    width: 495px;
+height: 38px;
+flex-shrink: 0;
+color: #182145;
+font: Roboto;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%; /* 35.2px */
+-webkit-text-stroke: 1px #182145;
+  }

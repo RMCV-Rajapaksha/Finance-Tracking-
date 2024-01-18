@@ -1,104 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import './Saving_Goal.css';
-import { Pie } from 'react-chartjs-2';
 
-const Saving_Goal = () => {
-  const [inputValues, setInputValues] = useState({
-    rent: 0,
-    utilities: 0,
-    insurancePremiums: 0,
-  });
+import './App.css';
+import React from 'react';
+import MainPage from './components/MainPage';
+import { BrowserRouter } from 'react-router-dom';
 
-  const data = {
-    labels: ['Rent', 'Utilities', 'Insurance Premiums'],
-    datasets: [
-      {
-        data: [
-          inputValues.rent,
-          inputValues.utilities,
-          inputValues.insurancePremiums,
-        ],
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-      },
-    ],
-  };
-
-  const handleChange = (e, expenseType) => {
-    const value = parseFloat(e.target.value) || 0;
-    setInputValues((prevValues) => ({
-      ...prevValues,
-      [expenseType]: value,
-    }));
-  };
-
-  useEffect(() => {
-   
-  }, [inputValues]);
-
+function App() {
   return (
+
+
     <React.Fragment>
-      <section>
-        <div className='saving'>Saving Goal</div>
-        <div className='saving-theme'>Start Your Budgeting Journey</div>
-        <div className='fixed-expenses'>
-          <div className='rent'>
-            <input
-              className='rent-input'
-              type='number'
-              placeholder='Rent'
-              value={inputValues.rent}
-              onChange={(e) => handleChange(e, 'rent')}
-            />
-          </div>
-          <div className='utilities'>
-            <input
-              className='utilities-input'
-              type='number'
-              placeholder='Utilities'
-              value={inputValues.utilities}
-              onChange={(e) => handleChange(e, 'utilities')}
-            />
-          </div>
-          <div className='insurance-premiums'>
-            <input
-              className='insurance-premiums-input'
-              type='number'
-              placeholder='Insurance Premiums'
-              value={inputValues.insurancePremiums}
-              onChange={(e) => handleChange(e, 'insurancePremiums')}
-            />
-          </div>
-        </div>
-        
-        <div className='variable-expenses'>
 
-        <div className='rent' >
-        <input className='food-input' type="number" placeholder="Rents" />
+<div className='main-container'>
+      <div className='rectangle'>
+        <div className='personal-finance-tracker'>
+          PERSONAL FINANCE
+          <br />
+          TRACKER
         </div>
-<div className='utilities' >
-<input className='traveling-input' type="number" placeholder="Rents" />
-</div>
-<div className='insurance-premiums' >
-<input className='clothes-other-input' type="number" placeholder="Rents" />
-</div>
+        <div className='secure-your-financial-future'>
+          Secure Your Financial Future
         </div>
-
-        <div className='chart-container'>
-          <div className='chart-container-in'>
-          <Pie data={data} />
-          </div>
+        <div className='whatsapp-image-at' />
+        <div className='seamlessly-manage'>
+          
+          Seamlessly Manage, Monitor, and Master Your Money with Our Intuitive
+          Personal Finance Tracker. Take Control and Achieve Goals
+        </div>
+      </div>
+      <div className='rectangle-1'>
+        <div className='welcome'>
+          <div className='w'>Welcome</div>
          
+          <div className='empty'> </div>
         </div>
-        <div className='chart-container-2'> 
-        <div className='chart-container-2-in'>
-          <Pie data={data} />
-          </div>
+        <div className='rectangle-4' ><input className="user-name" type="text" placeholder="Username"/>   </div>
+        <div className='rectangle-4' ><input className="user-password" type="password" placeholder="Password"/>   </div>
+        <div className='rectangle-5'>
+            
+          <div className='text-8'>Login</div>
         </div>
-
-      </section>
-    </React.Fragment>
+      </div>
+    </div>
+      
+      {/* <BrowserRouter>
+      <MainPage />
+      </BrowserRouter> */}
+       
+        </React.Fragment>
+        
   );
-};
+}
 
-export default Saving_Goal;
+export default App;

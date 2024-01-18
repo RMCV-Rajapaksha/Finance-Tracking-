@@ -13,21 +13,6 @@ line-height: 110%; /* 52.8px */
 
 }
 
-.saving-theme
-{position: absolute;
-    left:450px;
-    top : 110px;
-    width: 495px;
-height: 38px;
-flex-shrink: 0;
-color: #182145;
-font: Roboto;
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: 110%; /* 35.2px */
--webkit-text-stroke: 1px #182145;
-}
 
 .fixed-expenses
 {position: absolute;
@@ -390,3 +375,34 @@ font-style: normal;
 font-weight: 400;
 line-height: 110%; /* 26.4px */
 }
+
+/* Saving_Goal.css */
+
+/* ... existing styles ... */
+
+.saving-theme-1 {
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .saving-theme-1::before {
+    content: "It's never too late to start saving";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingAnimation 4s steps(60, end) 4s infinite;
+  }
+  
+  @keyframes typingAnimation {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  

@@ -2,7 +2,7 @@
   position: relative;
   top: 1500px;
   width: 412px;
-  height: 1175px;
+  height: 900px;
   top: 0;
   left: 0;
   font-size: 0px;
@@ -13,7 +13,7 @@
 .logout-b
 {
   position: absolute;
-  top: 1050px;
+  top: 800px;
   left : 55px;
   padding-bottom: 0%;
   border-bottom: 0px;

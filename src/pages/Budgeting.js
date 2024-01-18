@@ -91,7 +91,7 @@ const Budgeting = () => {
     <React.Fragment>
       
       <div className='saving'>Budgeting</div>
-        <div className='saving-theme'>Start Your Budgeting Journey</div>
+        <div className='saving-theme-1'>|</div>
         <div className='fixed-expenses'>
           <div className='fixed-expenses-topic'>
           Fixed Expenses
