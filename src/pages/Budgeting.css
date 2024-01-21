@@ -151,7 +151,7 @@ background: #D9D9D9;
     left:452px;
     top : 613px;
     width: 581px;
-height: 438px;
+height: 275px;
 flex-shrink: 0;
 border-radius: 25px;
 background: #D9D9D9;
@@ -160,10 +160,10 @@ background: #D9D9D9;
 .chart-container-in
 {
     position: absolute;
-    left:120px;
-    top : 60px;
-    width: 350px;
-height: 355px;
+    left:250px;
+    top : 0px;
+    width: 270px;
+height: 270px;
 flex-shrink: 0;
 background: #D9D9D9;
 }
@@ -174,7 +174,7 @@ background: #D9D9D9;
     left:1077px;
     top : 613px;
     width: 581px;
-height: 438px;
+height: 275px;
 flex-shrink: 0;
 border-radius: 25px;
 background: #D9D9D9;
@@ -185,10 +185,10 @@ background: #D9D9D9;
 .chart-container-2-in
 {
     position: absolute;
-    left:120px;
-    top : 60px;
-    width: 350px;
-height: 355px;
+    left:250px;
+    top : 0px;
+    width: 270px;
+height: 270px;
 flex-shrink: 0;
 background: #D9D9D9;
 }
@@ -388,7 +388,7 @@ line-height: 110%; /* 26.4px */
   }
   
   .saving-theme-1::before {
-    content: "It's never too late to start saving";
+    content: "Start your budgeting ";
     display: inline-block;
     vertical-align: bottom;
     width: 0;
@@ -406,3 +406,18 @@ line-height: 110%; /* 26.4px */
     }
   }
   
+  .saving-theme-1
+  {
+    position: absolute;
+    left:450px;
+    top : 110px;
+    width: 495px;
+height: 50px;
+flex-shrink: 0;
+color: #182145;
+font: Roboto;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%; /* 35.2px */
+-webkit-text-stroke: 1px #182145;}

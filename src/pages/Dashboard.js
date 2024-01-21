@@ -2,8 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Bar,Pie } from 'react-chartjs-2';
 import 'chart.js/auto';
 import './Dashboard.css';
+import { useLocation } from 'react-router-dom';
 
 const Dashboard = () => {
+  
+  const location = useLocation();
+  const mainIncome = new URLSearchParams(location.search).get('mainIncome');
+
+  
+
   // Chart configuration options
   const chartOptions = {
     scales: {
@@ -48,6 +55,8 @@ const Dashboard = () => {
     ],
   };
 
+  
+
   return (
     <React.Fragment>
       <section>
@@ -55,7 +64,7 @@ const Dashboard = () => {
         
         <div className='total-income'>
 <div className='total-income-title'>Total Income</div>
-<div className='total-income-value'>Rs 350000.00</div>
+<div className='total-income-value'>Rs {mainIncome}</div>
             </div>
             <div className='total-expenses'>
 <div className='total-expenses-title'>Total Expenses</div>

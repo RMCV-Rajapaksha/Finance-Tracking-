@@ -107,6 +107,7 @@ const Saving_Goal = () => {
       </div>
 
       <div className='enter-deposit'></div>
+      <div className='enter-deposit-chart'></div>
     </React.Fragment>
   );
 };

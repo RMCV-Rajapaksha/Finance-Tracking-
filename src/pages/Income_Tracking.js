@@ -27,7 +27,7 @@ const Income_Tracking = () => {
     });
   }
 
-  //first
+ // get main input and print it in the position 
   const [inputValue, setInputValue] = useState('');
   const [submittedValue, setSubmittedValue] = useState('');
 
@@ -42,6 +42,30 @@ const Income_Tracking = () => {
     // Set the submitted value to the current input value
     setSubmittedValue(inputValue);
   };
+  
+  //get other incomes and add them ad print it 
+  const [totalOtherIncome, setTotalOtherIncome] = useState(0);
+
+  function handleChange(e) {
+    setInputdata({
+      ...inputdata,
+      [e.target.name]: e.target.value
+    });
+  }
+
+  function handleSubmit() {
+    
+    setInputarr([...inputarr, inputdata]);
+
+    setTotalOtherIncome(totalOtherIncome + parseFloat(inputdata.rollNo));
+
+    setInputdata({
+      name: "",
+      rollNo: ""
+    });
+  }
+
+  
 
   return (
     <section>
@@ -58,13 +82,22 @@ const Income_Tracking = () => {
           <div className='I2'>OTHER INCOME</div>
 <input className="in" type="text" placeholder="Username" name='name' value={inputdata.name} onChange={handleChange} />   
 <input className="price" type="number" placeholder="Username" name='rollNo' value={inputdata.rollNo} onChange={handleChange}/>   
-<button className='submit' onClick={handleSubmit}>submit</button>
+<button className='submit1' onClick={handleSubmit}>submit</button>
             
           </div>
         </div>
 <div className='Main_income_div'>
-<div className='main_income_topic'>MAIN INCOME</div>
-<div>{submittedValue}</div>
+<div className='main_income_topic'>
+<div className='Main_income_div_text1'>TOTAL OTHER INCOME: Rs {totalOtherIncome}</div>
+</div>
+<div className='main-income-print'>
+<div className='Main_income_div_text2'>MAIN INCOME: Rs {submittedValue}</div>
+ </div>
+
+ <div className='total-income-print'> 
+ <div className='Main_income_div_text'>TOTAL INCOME: Rs {parseInt(submittedValue)+parseInt(totalOtherIncome)}</div>
+ </div>
+
 
 </div>
 <div className='other_income_table'>
