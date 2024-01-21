@@ -8,6 +8,13 @@ const Saving_Goal = () => {
   const [depositValue, setDepositValue] = useState('');
   const [tableData, setTableData] = useState([]);
   const [totalDeposit, setTotalDeposit] = useState(0);
+  
+//chart data
+  const [data1, setData1] = useState('');
+  const [data2, setData2] = useState('');
+  const [data3, setData3] = useState('');
+  const [data4, setData4] = useState('');
+  const [pieChartData, setPieChartData] = useState(null);
 
   const handleTargetChange = (e) => {
     setTargetValue(e.target.value);
@@ -41,6 +48,26 @@ const Saving_Goal = () => {
 
   //  color based 
   const wantDepositColor = remainingAmount >= 0 ? 'red' : 'green';
+
+
+  const generatePieChartData = () => {
+    return {
+      labels: ['Data1', 'Data2', 'Data3', 'Data4'],
+      datasets: [
+        {
+          data: [data1, data2, data3, data4].map(parseFloat),
+          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
+          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
+        },
+      ],
+    };
+  };
+
+  const updatePieChartData = () => {
+    const chartData = generatePieChartData();
+    setPieChartData(chartData);
+  };
+  
 
   return (
     <React.Fragment>
@@ -80,7 +107,9 @@ const Saving_Goal = () => {
       <div className='table-report'>
         <div className='table-report-topic'></div>
         <div className='report-saving-goal'>
+          <div className='report-saving-goal-topic'>Report</div>
           <table className='other-income-table'>
+            
             <tbody>
               <tr>
                 <th>Date</th>
@@ -106,8 +135,39 @@ const Saving_Goal = () => {
         </div>
       </div>
 
-      <div className='enter-deposit'></div>
-      <div className='enter-deposit-chart'></div>
+      <div className='enter-deposit'>
+      <table className='other-income-table'>
+           
+           
+            <tbody>
+              <tr>
+                <td>Date</td>
+                <td><input className='data1'/></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td><input className='data2'/></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td><input className='data3'/></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td><input className='data4'/></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div className='enter-deposit-chart'>
+  <div className='enter-deposit-chart-in'>
+    {pieChartData && pieChartData.labels ? (
+      <Pie data={pieChartData} />
+    ) : (
+      <p>No data available for the Pie chart.</p>
+    )}
+  </div>
+</div>
     </React.Fragment>
   );
 };
