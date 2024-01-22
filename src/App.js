@@ -47,29 +47,35 @@ function App() {
             <div className={`w welcome-animation`}>Welcome</div>
   <div className='empty'> </div>
             </div>
+
             <div className='rectangle-4'>
               <input
                 className="user-name"
                 type="text"
-                placeholder="Username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
+               <label className="user-label">Account</label>
             </div>
-            <div className='rectangle-4'>
+
+
+            <div className='rectangle-5'>
+
               <input
                 className="user-password"
                 type="password"
-                placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+               <label className="user-labe2">Password</label>
+               
             </div>
-            <div className='rectangle-5'>
-              <div className='text-8' onClick={handleLogin}>
+         
+           
+              <span><button className='text-8' onClick={handleLogin}>
                 Login
-              </div>
-            </div>
+              </button>
+           </span>
           </div>
         </div>
       )}

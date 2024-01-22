@@ -32,7 +32,7 @@ const Login = () => {
         <div className='rectangle-4' ><input className="" type="password" placeholder="Password"/>   </div>
         <div className='rectangle-5'>
             
-          <div className='text-8'>Login</div>
+          <button className='text-8'>Login</button>
         </div>
       </div>
     </div>

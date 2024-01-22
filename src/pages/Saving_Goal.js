@@ -105,10 +105,10 @@ const Saving_Goal = () => {
       </div>
 
       <div className='table-report'>
-        <div className='table-report-topic'></div>
+      <div className='report-saving-goal-topic'>Report</div>
         <div className='report-saving-goal'>
-          <div className='report-saving-goal-topic'>Report</div>
-          <table className='other-income-table'>
+       
+          <table className='other-income-table-6'>
             
             <tbody>
               <tr>
@@ -125,6 +125,8 @@ const Saving_Goal = () => {
           </table>
         </div>
       </div>
+
+
       <div className='total-deposit'>
         <div className='total-deposit-n'>Total Deposited Amount: Rs. {totalDeposit}</div>
       </div>

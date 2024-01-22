@@ -100,10 +100,10 @@ const Income_Tracking = () => {
 
 
 </div>
-<div className='other_income_table'>
+<div className='other_income_table_1'>
 <div className='other_topic'>OTHER INCOME</div>
 
-<table className ='other-income-table'  >
+<table className ='other-income-table-1'  >
 <tbody>
 <tr>
 <th>tag</th>

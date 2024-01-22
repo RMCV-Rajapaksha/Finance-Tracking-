@@ -252,12 +252,13 @@ background: #A7C4C2;
 
   }
 
-  .other-income-table
+  .other-income-table-6
   {
     position: absolute;
-    left:0px;
-    height: 200px;
-    width: 200px;
+    top: 50px;
+    left:50px;
+    height: 10px;
+    width: 500px;
    
     
   }
@@ -277,3 +278,4 @@ font-weight: 400;
 line-height: 110%; /* 35.2px */
 -webkit-text-stroke: 1px #182145;
   }
+  
