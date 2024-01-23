@@ -19,7 +19,7 @@ const Sidebar = () => {
             <NavLink to={item.path} 
              className={({isActive})=>isActive?activeLink:normalLink}>
              
-              <button className='b'><span><div >{item.title}</div></span></button>
+              <button className='b'><span><div >{item.icon}{item.title}</div></span></button>
             </NavLink>
             
             </div>
