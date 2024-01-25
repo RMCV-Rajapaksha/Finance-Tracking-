@@ -29,6 +29,7 @@ Viranga is the tech guru of our team. Enthusiastic about exploring the latest in
     </div>
 
     <div className='chamara-img'>
+   
       </div>
 </div>
         </section>

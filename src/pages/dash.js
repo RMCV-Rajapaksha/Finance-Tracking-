@@ -1,141 +1,177 @@
-
 import React, { useState } from 'react';
-import './Income_Tracking.css';
+import './Saving_Goal.css';
+import { Pie } from 'react-chartjs-2';
 
-
-const Income_Tracking = () => {
-  const [inputarr, setInputarr] = useState([]);
-  const [inputdata, setInputdata] = useState({
-    name: "",
-    rollNo: ""
-  });
-
-  function handleChange(e) {
-    setInputdata({
-      ...inputdata,
-      [e.target.name]: e.target.value
-    });
-  }
-
-  function handleSubmit() {
-    setInputarr([...inputarr, inputdata]);
-    console.log("Input data entered:", inputdata);
-
-    setInputdata({
-      name: "",
-      rollNo: ""
-    });
-  }
-
- // get main input and print it in the position 
-  const [inputValue, setInputValue] = useState('');
-  const [submittedValue, setSubmittedValue] = useState('');
-
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const handleSubmit1 = (event) => {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-
-    // Set the submitted value to the current input value
-    setSubmittedValue(inputValue);
-  };
+const Saving_Goal = () => {
+  const [targetValue, setTargetValue] = useState('');
+  const [dateValue, setDateValue] = useState('');
+  const [depositValue, setDepositValue] = useState('');
+  const [tableData, setTableData] = useState([]);
+  const [totalDeposit, setTotalDeposit] = useState(0);
   
-  //get other incomes and add them ad print it 
-  const [totalOtherIncome, setTotalOtherIncome] = useState(0);
+//chart data
+  const [data1, setData1] = useState('');
+  const [data2, setData2] = useState('');
+  const [data3, setData3] = useState('');
+  const [data4, setData4] = useState('');
+  const [pieChartData, setPieChartData] = useState(null);
 
-  function handleChange(e) {
-    setInputdata({
-      ...inputdata,
-      [e.target.name]: e.target.value
-    });
-  }
+  const handleTargetChange = (e) => {
+    setTargetValue(e.target.value);
+  };
 
-  function handleSubmit() {
+  const handleDateChange = (e) => {
+    setDateValue(e.target.value);
+  };
+
+  const handleDepositChange = (e) => {
+    setDepositValue(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    if (dateValue && depositValue) {
+      const depositAmount = parseFloat(depositValue);
+      // Add the new entry to the tableData array
+      setTableData([...tableData, { date: dateValue, deposit: depositAmount }]);
+
+      // Update total deposit
+      setTotalDeposit((prevTotalDeposit) => prevTotalDeposit + depositAmount);
+
     
-    setInputarr([...inputarr, inputdata]);
+      setDateValue('');
+      setDepositValue('');
+    }
+  };
 
-    setTotalOtherIncome(totalOtherIncome + parseFloat(inputdata.rollNo));
+  // Calculate the remaining amount 
+  const remainingAmount = targetValue ? parseFloat(targetValue) - totalDeposit : 0;
 
-    setInputdata({
-      name: "",
-      rollNo: ""
-    });
-  }
+  //  color based 
+  const wantDepositColor = remainingAmount >= 0 ? 'red' : 'green';
 
-//get total income
-  const totalIncome = parseInt(submittedValue) + parseInt(totalOtherIncome);
 
-  // total income in localStorage
-  localStorage.setItem('totalIncome', totalIncome.toString());
+  const generatePieChartData = () => {
+    return {
+      labels: ['Data1', 'Data2', 'Data3', 'Data4'],
+      datasets: [
+        {
+          data: [data1, data2, data3, data4].map(parseFloat),
+          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
+          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
+        },
+      ],
+    };
+  };
 
+  const updatePieChartData = () => {
+    const chartData = generatePieChartData();
+    setPieChartData(chartData);
+  };
   
 
   return (
-    <section>
-       <div className='Income'><p>Income Tracking</p></div>
-       <div className='main'>
-          <div className='main-i'>
-<div className='I1'>MAIN INCOME</div>
+    <React.Fragment>
+      <div className='saving'>Saving Goal</div>
+      <div className='saving-theme'>|</div>
+      <div className='target-1'>
+        <div className='target-1-topic'>Enter Your Target</div>
+        <input
+          className='target-input'
+          type='number'
+          placeholder='Target'
+          value={targetValue}
+          onChange={handleTargetChange}
+        />
+      </div>
+      <div className='target-2'>
+        <div className='target-1-topic'>Date and Money Deposit Date</div>
+        <button className='deposit-button' onClick={handleSubmit}>
+          Submit
+        </button>
+        <input
+          className='date-input'
+          type='date'
+          placeholder='Date'
+          value={dateValue}
+          onChange={handleDateChange}
+        />
+        <input
+          className='deposit-input'
+          type='number'
+          placeholder='Rs.'
+          value={depositValue}
+          onChange={handleDepositChange}
+        />
+      </div>
 
-<input className="priceA" type="number" placeholder="Price" value={inputValue} onChange={handleInputChange}/>   
-<button className='submit' onClick={handleSubmit1}>submit</button>
-
-          </div>
-          <div className='other'>
-          <div className='I2'>OTHER INCOME</div>
-<input className="in" type="text" placeholder="Username" name='name' value={inputdata.name} onChange={handleChange} />   
-<input className="price" type="number" placeholder="Username" name='rollNo' value={inputdata.rollNo} onChange={handleChange}/>   
-<button className='submit1' onClick={handleSubmit}>submit</button>
-            
-          </div>
-        </div>
-<div className='Main_income_div'>
-<div className='main_income_topic'>
-<div className='Main_income_div_text1'>TOTAL OTHER INCOME: Rs {totalOtherIncome}</div>
-</div>
-<div className='main-income-print'>
-<div className='Main_income_div_text2'>MAIN INCOME: Rs {submittedValue}</div>
- </div>
-
- <div className='total-income-print'> 
- <div className='Main_income_div_text'>TOTAL INCOME: Rs {parseInt(submittedValue)+parseInt(totalOtherIncome)}</div>
- </div>
-
-
-</div>
-<div className='other_income_table_1'>
-<div className='other_topic'>OTHER INCOME</div>
-
-<table className ='other-income-table-1'  >
-<tbody>
-<tr>
-<th>tag</th>
-<th>Price</th>
-
-</tr>
-{
-inputarr.map((info, index) => {
-return (
-<tr key={index}>
-<td>{info.name}</td>
-<td> Rs {info.rollNo}</td>
-</tr>
-);
-})
-}
-</tbody>
-</table>
-
-</div>
-        
+      <div className='table-report'>
+      <div className='report-saving-goal-topic'>Report</div>
+        <div className='report-saving-goal'>
        
+          <table className='other-income-table-6'>
+            
+            <tbody>
+              <tr>
+                <th>Date</th>
+                <th>Deposit Amount</th>
+              </tr>
+              {tableData.map((entry, index) => (
+                <tr key={index}>
+                  <td>{entry.date}</td>
+                  <td>Rs. {entry.deposit}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-        
-    </section>
-  )
-}
 
-export default Income_Tracking
+      <div className='total-deposit'>
+        <div className='total-deposit-n'>Total Deposited Amount: Rs. {totalDeposit}</div>
+      </div>
+
+      <div className='want-deposit'>
+        <div className='want-to-deposit-name' style={{ color: wantDepositColor }}>
+          Remaining Amount to Reach Target: Rs. {remainingAmount}
+        </div>
+      </div>
+
+      <div className='enter-deposit'>
+      <table className='other-income-table'>
+           
+           
+            <tbody>
+              <tr>
+                <td>Date1</td>
+                <td><input className='data1'/></td>
+              </tr>
+              <tr>
+                <td>Date2</td>
+                <td><input className='data2'/></td>
+              </tr>
+              <tr>
+                <td>Date3</td>
+                <td><input className='data3'/></td>
+              </tr>
+              <tr>
+                <td>Date4</td>
+                <td><input className='data4'/></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div className='enter-deposit-chart'>
+        <div className='enter-deposit-chart-in'>
+          {barChartData ? (
+            <Bar data={barChartData} />
+          ) : (
+            <p>No data available for the Bar chart.</p>
+          )}
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default Saving_Goal;

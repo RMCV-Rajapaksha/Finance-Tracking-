@@ -16,13 +16,16 @@ const Sidebar = () => {
         SidebarData.map((item, index) => {
           return (
             <div  className='a' key={index}>
+              
             <NavLink to={item.path} 
              className={({isActive})=>isActive?activeLink:normalLink}>
              
-              <button className='b'><span><div >{item.icon}{item.title}</div></span></button>
-            </NavLink>
+              <button className='b'><span><div >{item.icon} {item.title}</div></span></button>
             
+            
+            </NavLink>
             </div>
+         
           
  
            
