@@ -270,7 +270,7 @@ line-height: 110%; /* 52.8px */
 .Main_income_div_text1
 {
     position: absolute;
-    left:15+px;
+    left:15px;
     top: 40px;
     -webkit-text-stroke: 1px #182145;
 
@@ -286,3 +286,20 @@ line-height: 110%; /* 52.8px */
 
 }
 
+.line-chart
+{ position: absolute;
+    left:30px;
+    top : 30px;
+    width: 380px;
+    height: 200px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    
+   
+}
+
+
+.submit1
+{
+
+}

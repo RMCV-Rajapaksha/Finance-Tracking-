@@ -421,3 +421,21 @@ font-style: normal;
 font-weight: 400;
 line-height: 110%; /* 35.2px */
 -webkit-text-stroke: 1px #182145;}
+
+.clothes-other-title
+{
+    position: absolute;
+    top : 30px;
+    left:15px;
+    width: 250px;
+height: 36px;
+flex-shrink: 0;
+    color: #182145;
+    font: Roboto, var(--default-font-family);
+    -webkit-text-stroke: 1px #182145;
+
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: 110%; /* 26.4px */
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Saving_Goal.css';
-import { Pie, Bar } from 'react-chartjs-2';
+import {Line, Pie, Bar } from 'react-chartjs-2';
 
 const Saving_Goal = () => {
   const [targetValue, setTargetValue] = useState('');
@@ -10,11 +10,6 @@ const Saving_Goal = () => {
   const [totalDeposit, setTotalDeposit] = useState(0);
 
   //chart data
-  const [data1, setData1] = useState('');
-  const [data2, setData2] = useState('');
-  const [data3, setData3] = useState('');
-  const [data4, setData4] = useState('');
-  const [barChartData, setBarChartData] = useState(null);
 
   const handleTargetChange = (e) => {
     setTargetValue(e.target.value);
@@ -45,30 +40,35 @@ const Saving_Goal = () => {
   const remainingAmount = targetValue ? parseFloat(targetValue) - totalDeposit : 0;
   const wantDepositColor = remainingAmount >= 0 ? 'red' : 'green';
 
-  const generateBarChartData = () => {
-    return {
-      labels: ['Data1', 'Data2', 'Data3', 'Data4'],
+  const [chartData, setChartData] = useState({
+    labels: ['Fix-1', 'Fix-2', 'Fix-3', 'Fix-4'],
+    datasets: [
+      {
+        label: 'Deposit Amount',
+        data: [0, 0, 0, 0],
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1,
+      },
+    ],
+  });
+
+  const handleInputChange = (e, index) => {
+    const newData = [...chartData.datasets[0].data];
+    newData[index] = parseFloat(e.target.value) || 0;
+
+    setChartData({
+      labels: chartData.labels,
       datasets: [
         {
-          label: 'User Input Data',
-          data: [data1, data2, data3, data4].map(parseFloat),
-          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
-          borderColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
-          borderWidth: 1,
+          ...chartData.datasets[0],
+          data: newData,
         },
       ],
-    };
+    });
   };
 
-  const updateBarChartData = () => {
-    const chartData = generateBarChartData();
-    setBarChartData(chartData);
-  };
-
-  useEffect(() => {
-    updateBarChartData();
-  }, [data1, data2, data3, data4]);
-
+  
   return (
     <React.Fragment>
       <div className='saving'>Saving Goal</div>
@@ -138,36 +138,27 @@ const Saving_Goal = () => {
       </div>
 
       <div className='enter-deposit'>
-      <table className='other-income-table'>
-           
-           
-            <tbody>
-              <tr>
-                <td>Date1</td>
-                <td><input className='data1'/></td>
+        <table className='other-income-table-16'>
+          <tbody>
+            {chartData.labels.map((label, index) => (
+              <tr key={index}>
+                <td>{label}</td>
+                <td>
+                  <input
+                    className={`data${index + 1}`}
+                    value={chartData.datasets[0].data[index]}
+                    onChange={(e) => handleInputChange(e, index)}
+                  />
+                </td>
               </tr>
-              <tr>
-                <td>Date2</td>
-                <td><input className='data2'/></td>
-              </tr>
-              <tr>
-                <td>Date3</td>
-                <td><input className='data3'/></td>
-              </tr>
-              <tr>
-                <td>Date4</td>
-                <td><input className='data4'/></td>
-              </tr>
-            </tbody>
-          </table>
+            ))}
+          </tbody>
+        </table>
       </div>
+
       <div className='enter-deposit-chart'>
         <div className='enter-deposit-chart-in'>
-          {barChartData ? (
-            <Bar data={barChartData} />
-          ) : (
-            <p>No data available for the Bar chart.</p>
-          )}
+          <Line data={chartData} />
         </div>
       </div>
     </React.Fragment>

@@ -22,10 +22,10 @@ Viranga is the tech guru of our team. Enthusiastic about exploring the latest in
 <div className='chamara'>
 
   <div className='chamara-about'>
-  Viranga <br/>
-
-Tech Enthusiast<br/>
-Viranga is the tech guru of our team. Enthusiastic about exploring the latest in technology, he adds the innovative touch to our financial tracker. Viranga ensures that our application not only meets but exceeds the technological expectations, making it both powerful and accessible.
+  Chamara <br/>
+ 
+ Programming Prodigy<br/>
+ Chamara is the wizard behind the code. With a passion for programming and a keen eye for detail, he's the architect bringing the financial tracker to life. From algorithms to user interfaces, Chamara ensures a seamless and efficient experience.
     </div>
 
     <div className='chamara-img'>
