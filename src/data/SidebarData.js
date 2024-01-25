@@ -27,7 +27,7 @@ export const SidebarData = [
         icon: <FaIcons.FaHome />,
     },
     {
-        title: "Reports",
+        title: "About Us",
         path: "/Reports",
         icon: <FaIcons.FaHome />,
     },

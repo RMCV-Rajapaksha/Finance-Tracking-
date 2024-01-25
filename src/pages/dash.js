@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import './Income_Tracking.css';
 
-import { useHistory } from 'react-router-dom'; 
 
 const Income_Tracking = () => {
   const [inputarr, setInputarr] = useState([]);
@@ -65,13 +64,14 @@ const Income_Tracking = () => {
       rollNo: ""
     });
   }
-//pass the value to the dashboard
-const history = useHistory();
-  const handleNavigate = () => {
-    // Pass the value as a URL parameter when navigating to the other page
-    history.push(`/Dashboard?mainIncome=${submittedValue}`);
-  };
 
+//get total income
+  const totalIncome = parseInt(submittedValue) + parseInt(totalOtherIncome);
+
+  // total income in localStorage
+  localStorage.setItem('totalIncome', totalIncome.toString());
+
+  
 
   return (
     <section>
@@ -101,15 +101,15 @@ const history = useHistory();
  </div>
 
  <div className='total-income-print'> 
- <div className='Main_income_div_text'>TOTAL INCOME: Rs {totalOtherIncome+ submittedValue}</div>
+ <div className='Main_income_div_text'>TOTAL INCOME: Rs {parseInt(submittedValue)+parseInt(totalOtherIncome)}</div>
  </div>
 
 
 </div>
-<div className='other_income_table'>
+<div className='other_income_table_1'>
 <div className='other_topic'>OTHER INCOME</div>
 
-<table className ='other-income-table'  >
+<table className ='other-income-table-1'  >
 <tbody>
 <tr>
 <th>tag</th>

@@ -24,7 +24,7 @@ button {
 .main-container {
   position: relative;
   width: 1728px;
-  height: 1020px;
+  height: 900px;
   margin: 0 auto;
   background: #ffffff;
   overflow: hidden;
@@ -104,7 +104,7 @@ button {
 
 .rectangle-1 {
   position: absolute;
-  top: 292px;
+  top: 200px;
   left: 1001px;
   display: inline-block;
   width: 604px;
@@ -134,7 +134,7 @@ button {
 
 .rectangle-1:hover {
   -webkit-transform: scale(1.25, 1.25);
-  transform: scale(1.25, 1.25);
+  transform: scale(1.05, 1.05);
 }
 
 .rectangle-1:hover::after {

@@ -65,6 +65,12 @@ const Income_Tracking = () => {
     });
   }
 
+//get total income
+  const totalIncome = parseInt(submittedValue) + parseInt(totalOtherIncome);
+
+  // total income in localStorage
+  localStorage.setItem('totalIncome', totalIncome.toString());
+
   
 
   return (
