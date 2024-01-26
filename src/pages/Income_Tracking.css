@@ -40,8 +40,8 @@ line-height: 110%; /* 52.8px */
     width: 346px;
     height: 208px;
     flex-shrink: 0;
-    background: #D9D9D9;
-    border: 4px solid #A7C4C2;
+    background: #71BAB5;
+    border: 4px solid #71BAB5;
 
 
 }
@@ -213,8 +213,31 @@ table {
     z-index: 100;
 
 }
-.main_income_topic
-{
+.main-income-print::after {
+    content: "";
+    border-radius: 25px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 45px #182145;
+    opacity: 10;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .main-income-print:hover {
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(1.08, 1.08);
+  }
+  
+  .main-income-print:hover::after {
+      opacity: 1;
+  }
+
+.main_income_topic {
     position: absolute;
     left:425px;
     top : 10px;
@@ -235,7 +258,32 @@ text-align: center;
 font-weight: 400;
 line-height: 110%; /* 52.8px */
 
+flex-shrink: 0;
 }
+  .main_income_topic::after {
+    content: "";
+    border-radius: 25px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 45px #182145;
+    opacity: 10;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .main_income_topic:hover {
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(1.08, 1.08);
+  }
+  
+  .main_income_topic:hover::after {
+      opacity: 1;
+  }
+  
 
 .total-income-print
 {
@@ -258,6 +306,31 @@ font-size: 20px;
 font-weight: 400;
 line-height: 110%; /* 52.8px */
 }
+
+.total-income-print::after {
+    content: "";
+    border-radius: 25px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 45px #182145;
+    opacity: 10;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .total-income-print:hover {
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(1.08, 1.08);
+  }
+  
+  .total-income-print:hover::after {
+      opacity: 1;
+  }
+  
 
 .Main_income_div_text
 {
@@ -301,5 +374,15 @@ line-height: 110%; /* 52.8px */
 
 .submit1
 {
-
+    font: Roboto;
+    font-size: 20px;
+    
+        position: absolute;
+        left:101px;
+        top : 146px;
+        width: 144px;
+        height: 41px;
+        flex-shrink: 0;
+        border-radius: 25px;
+    background: #A7C4C2;
 }
