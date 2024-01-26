@@ -5,6 +5,10 @@ const Reports = () => {
   return (
     <React.Fragment>
       <section>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
 <div className='about-title'>About Us</div>
 <div className='about'>Hello! We're Chamara and Viranga, a dynamic duo of undergraduate students from the University of Ruhuna, collaborating to bring you an intuitive and user-friendly financial tracker.</div>
 <div className='viranga'>

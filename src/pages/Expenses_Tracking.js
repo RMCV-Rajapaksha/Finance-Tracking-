@@ -89,6 +89,10 @@ const [clothesExpenses, setClothesExpenses] = useState([]);
   return (
     <React.Fragment>
     <section>
+    <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
         <div className='Expenses'><p>Expenses Tracking</p></div>
         <div className='main'>
           <div className='food'>

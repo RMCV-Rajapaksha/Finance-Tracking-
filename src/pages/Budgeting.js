@@ -89,7 +89,10 @@ const Budgeting = () => {
 
   return (
     <React.Fragment>
-      
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
       <div className='saving'>Budgeting</div>
         <div className='theme'></div><div className='saving-theme-1'>|</div><div/>
         <div className='fixed-expenses'>

@@ -60,6 +60,10 @@ const Dashboard = () => {
   return (
     <React.Fragment>
       <section>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
+      <div class="flier"><img width="150" height="150" src="https://img.icons8.com/clouds/100/money-bag.png" /></div>
         <div className='dashboard-title'>Dashboard</div>
         
         <div className='total-income'>
