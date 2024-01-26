@@ -69,6 +69,7 @@ const Dashboard = () => {
         <div className='total-income'>
 <div className='total-income-title'>Total Income</div>
 <div className='total-income-value'>Rs {mainIncome}</div>
+<img class="icon" width="120" height="120" src="https://img.icons8.com/ios/100/1A1A1A/economic-improvement.png" alt="economic-improvement"/>
             </div>
             <div className='total-expenses'>
 <div className='total-expenses-title'>Total Expenses</div>
@@ -77,18 +78,19 @@ const Dashboard = () => {
 <div className='food-2'>
 <div className='food-2-title'>FOR FOOD</div>
 <div className='food-2-value'>Rs 50000.00</div>
-
+<img className='icons' width="68" height="68" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/48/1A1A1A/external-line-graph-strategy-tanah-basah-basic-outline-tanah-basah.png" alt="external-line-graph-strategy-tanah-basah-basic-outline-tanah-basah"/>
 </div>
 <div className='traveling'>
 <div className='traveling-title'>TRAVELING</div>
 <div className='food-2-value'>Rs 50000.00</div>
+<img className='icons' width="68" height="68" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/48/1A1A1A/external-line-graph-strategy-tanah-basah-basic-outline-tanah-basah.png" alt="external-line-graph-strategy-tanah-basah-basic-outline-tanah-basah"/>
 
 
 </div>
 <div className='other-1'>
 <div className='other-title'>OTHER</div>
 <div className='food-2-value'>Rs 75000.00</div>
-
+<img className='icons' width="68" height="68" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/48/1A1A1A/external-line-graph-strategy-tanah-basah-basic-outline-tanah-basah.png" alt="external-line-graph-strategy-tanah-basah-basic-outline-tanah-basah"/>
 
 </div>
 

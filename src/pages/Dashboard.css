@@ -480,3 +480,17 @@ line-height: 110%;
 		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
 	}
 }
+
+.icons
+{
+    position: absolute;
+    left: 75px;
+    top: 70px;
+}
+
+.icon{
+    position: absolute;
+    left: 85px;
+    top: 20px;
+    opacity: 0.3;
+}
