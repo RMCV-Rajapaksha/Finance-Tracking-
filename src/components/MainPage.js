@@ -32,6 +32,7 @@ const MainPage = () => {
         <div className='ee'>
           <NavPage />
         </div>
+        
       </section>
     </React.Fragment>
   );

@@ -15,7 +15,7 @@ const Sidebar = () => {
       {
         SidebarData.map((item, index) => {
           return (
-            <div  className='a' key={index}>
+            <div  className='' key={index}>
               
             <NavLink to={item.path} 
              className={({isActive})=>isActive?activeLink:normalLink}>

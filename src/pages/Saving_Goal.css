@@ -155,19 +155,37 @@ line-height: 110%; /* 28.6px */
 
 }
 
-.deposit-button
-{
-    position: absolute;
+
+
+
+.deposit-button {
+  position: absolute;
     top:20px ;
-    left: 450px;
-    width: 100px;
-height: 35px;
-flex-shrink: 0;
-border-radius: 25px;
-background: #2ba39b;
-font: Roboto;
+    left: 405px;
+      width: 144px;
+      height: 35px;
+background-color: #A7C4C2;
+border-radius: 100px;
+box-shadow: rgba(24, 33, 69, .2) 0 -25px 18px -14px inset,rgba(24, 33, 69, .15) 0 1px 2px,rgba(24, 33, 69, .15) 0 2px 4px,rgba(24, 33, 69, .15) 0 4px 8px,rgba(24, 33, 69, .15) 0 8px 16px,rgba(24, 33, 69, .15) 0 16px 32px;
+color: #182145;
 font-size: 20px;
--webkit-text-stroke: 1px #182145;
+cursor: pointer;
+display: inline-block;
+font: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+padding: 7px 20px;
+text-align: center;
+text-decoration: none;
+transition: all 250ms;
+border: 0;
+font-size: 16px;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.deposit-button:hover {
+box-shadow: rgba(24, 33, 69,.35) 0 -25px 18px -14px inset,rgba(24, 33, 69,.25) 0 1px 2px,rgba(24, 33, 69,.25) 0 2px 4px,rgba(24, 33, 69,.25) 0 4px 8px,rgba(24, 33, 69,.25) 0 8px 16px,rgba(24, 33, 69,.25) 0 16px 32px;
+transform: scale(1.05) rotate(-1deg);
 }
 
 .report-saving-goal
