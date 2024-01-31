@@ -125,7 +125,20 @@ const Dashboard = () => {
         </div>
 
     
-        <div class
+        <div className='chart-1'>
+          <div className='chart-1-title'>Account Summary</div>
+        <div className='chart-1-in'>
+          <Bar data={chartData} options={chartOptions} ref={(ref) => setChart(ref)} />
+          </div>
+        
+        </div>
+
+       <div className='Expenses-chart'>
+       <div className='expenses-chart-title'>Expenses Breakdown</div>
+          <div className='expenses-chart-in'>
+            <Pie data={expensesChartData} />
+          </div>
+</div>
        
 
     
