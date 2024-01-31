@@ -62,7 +62,7 @@ function App() {
             <div className='rectangle-5'>
 
               <input
-                className="user-password"
+                className="c"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

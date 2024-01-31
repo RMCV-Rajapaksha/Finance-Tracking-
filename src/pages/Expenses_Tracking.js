@@ -140,7 +140,7 @@ inputarr.map((info, index) => {
   return (
     <tr key={index}>
       <td>{info.name}</td>
-      <td> Rs{info.rollNo}</td>
+      <td>Rs {info.rollNo}</td>
     </tr>
   );
 })
@@ -164,7 +164,7 @@ destinations.map((destination, index) => {
   return (
     <tr key={index}>
       <td>{destination.place}</td>
-      <td> {destination.travelDate}</td>
+      <td>Rs {destination.travelDate}</td>
     </tr>
   );
 })
@@ -190,7 +190,7 @@ clothesExpenses.map((expense, index) =>  {
   return (
     <tr key={index}>
       <td>{expense.item}</td>
-      <td> Rs{expense.price}</td>
+      <td>Rs {expense.price}</td>
     </tr>
   );
 })
