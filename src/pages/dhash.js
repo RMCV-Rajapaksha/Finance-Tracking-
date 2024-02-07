@@ -21,15 +21,6 @@ const Dashboard = () => {
   };
 
 
-  const [bankAccountAmounts, setBankAccountAmounts] = useState([0, 0, 0, 0]);
-  const [chart, setChart] = useState(null);
-
-  const updateBankAccountAmount = (index, value) => {
-    const newAmounts = [...bankAccountAmounts];
-    newAmounts[index] = value;
-    setBankAccountAmounts(newAmounts);
-  };
-
  
   const chartData = {
     labels: ['Bank of Ceylon', "People's Bank", 'DFCC Bank', 'Sampath Bank'],
@@ -43,19 +34,6 @@ const Dashboard = () => {
       },
     ],
   };
-  const expensesChartData = {
-    labels: ['FOR FOOD', 'TRAVELING', 'OTHER'],
-    datasets: [
-      {
-        data: [50000.00, 50000.00, 75000.00],
-        backgroundColor: ['rgba(27, 157, 148, 0.9)', 'rgba(113, 186, 181, 0.9)', 'rgba(167, 196, 194, 0.9s)'],
-        borderColor: ['rgba(27, 157, 148, 1)', 'rgba(113, 186, 181, 1)', 'rgba(167, 196, 194, 1)'],
-        borderWidth: 1,
-      },
-    ],
-  };
-
-  
 
   return (
     <React.Fragment>
