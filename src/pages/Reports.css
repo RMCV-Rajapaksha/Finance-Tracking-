@@ -102,7 +102,7 @@ line-height: 110%; /* 26.4px */
 height: 271px;
 flex-shrink: 0;
   border-radius: 271px;
-background:url(../assets/image/chama_.jpg) #A7C4C2 50% / cover no-repeat;
+background:url('') #A7C4C2 50% / cover no-repeat;
 }
 .chamara-img::after {
   content: "";
